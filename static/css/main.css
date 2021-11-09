@@ -69,6 +69,7 @@ li {
   letter-spacing: 6px;
   font-size: 26px;
   font-weight: bold;
+  line-height: 32px;
 }
 
 .title--small {
@@ -235,17 +236,23 @@ header .header__flower__left {
   position: absolute;
   top: 50px;
   left: 300px;
+  z-index: -1;
 }
 header .header__flower__right {
   position: absolute;
   top: 20px;
   right: 330px;
+  z-index: -1;
 }
 header .header__background {
   width: 100%;
   height: 40px;
   background: url("/static/images/home/bg_footer.png");
   background-size: cover;
+}
+header .header__background .header__background__phone {
+  opacity: 0;
+  visibility: hidden;
 }
 header .header__box {
   height: 120px;
@@ -273,6 +280,13 @@ header .header__box .header__box--padding .header__box__phone .header__box__phon
   font-weight: bold;
   font-size: 20px;
 }
+header .header__box .header__box--padding .header__box__cart img {
+  width: 50px;
+  height: 45px;
+}
+header .header__box .header__box__nav {
+  display: none;
+}
 header .header__menu {
   height: 80px;
   border-bottom: 2px solid #d8ccbf;
@@ -290,6 +304,9 @@ header .header__menu .header__menu--padding li a span {
 }
 header .header__menu .header__menu--padding li a:hover span {
   color: #8c6239;
+}
+header .header__menu .header__menu--padding img {
+  display: none;
 }
 
 .banner-home {
@@ -315,9 +332,10 @@ header .header__menu .header__menu--padding li a:hover span {
 }
 .about-us-home .about-us-home__content .about-us-home__content__description {
   margin-top: 10px;
+  padding: 0px 200px;
 }
 .about-us-home .about-us-home__content .about-us-home__content__description p {
-  margin-top: 10px;
+  text-align: center;
 }
 .about-us-home .about-us-home__image {
   position: relative;
@@ -346,10 +364,10 @@ header .header__menu .header__menu--padding li a:hover span {
 }
 .menu-home .menu-home__image img {
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 99%;
 }
 .menu-home .menu-home__image .menu-home__image__img {
   z-index: -1;
@@ -437,7 +455,7 @@ footer .footer__box .footer__box__space p span {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 99%;
 }
 .banner-page .banner-page__background {
   position: absolute;
@@ -453,6 +471,7 @@ footer .footer__box .footer__box__space p span {
 }
 .articles-page .articles-page__articles .articles-page__articles__article .article__image__box {
   display: inline-block;
+  width: 100%;
   height: 330px;
   overflow: hidden;
 }
@@ -473,6 +492,9 @@ footer .footer__box .footer__box__space p span {
   justify-self: 21px;
   overflow: hidden;
   font-weight: bold;
+  line-height: 22px;
+  height: 22px;
+  overflow: hidden;
 }
 .articles-page .articles-page__articles .articles-page__articles__article .article__content .article__content__description {
   margin-top: 5px;
@@ -540,6 +562,8 @@ footer .footer__box .footer__box__space p span {
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
+  height: 20px;
+  overflow: hidden;
 }
 .about-us-page .container-fluid.who .about-us-page__who .about-us-page__who__content .content__description {
   margin-top: 25px;
@@ -575,6 +599,7 @@ footer .footer__box .footer__box__space p span {
 }
 .about-us-page .container-fluid.why .about-us-page__why__reason .reason__image__box {
   display: inline-block;
+  width: 100%;
   height: 250px;
 }
 .about-us-page .container-fluid.why .about-us-page__why__reason .reason__image__box img {
@@ -590,6 +615,8 @@ footer .footer__box .footer__box__space p span {
   width: 100%;
   font-size: 18px;
   text-transform: uppercase;
+  height: 24px;
+  overflow: hidden;
 }
 .about-us-page .container-fluid.why .about-us-page__why__reason .reason__content .reason__content__name {
   font-size: 12px;
@@ -910,6 +937,7 @@ footer .footer__box .footer__box__space p span {
   font-size: 28px;
   font-weight: bold;
   text-align: center;
+  line-height: 32px;
 }
 .article-details .article-details__description {
   margin-top: 45px;
@@ -1039,6 +1067,9 @@ footer .footer__box .footer__box__space p span {
   text-align: left;
   font-size: 13px;
 }
+.cart-page .cart-page__details .cart-page__details__table table tbody tr td:nth-child(2) > div > p img {
+  display: none;
+}
 .cart-page .cart-page__details .cart-page__details__table table tbody tr td:nth-child(2) > div .price {
   display: none;
 }
@@ -1070,30 +1101,6 @@ footer .footer__box .footer__box__space p span {
   font-size: 13px;
   font-weight: normal;
   color: #ff5c01;
-}
-.cart-page .cart-page__details .cart-page__details__table .no-products {
-  margin-top: 36px;
-}
-.cart-page .cart-page__details .cart-page__details__table .no-products p {
-  font-weight: 500;
-  text-align: center;
-}
-.cart-page .cart-page__details .cart-page__details__table .no-products div {
-  margin-top: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.cart-page .cart-page__details .cart-page__details__table .no-products div a {
-  display: flex;
-  align-items: center;
-}
-.cart-page .cart-page__details .cart-page__details__table .no-products div a img {
-  width: 20px;
-  height: 20%;
-  margin-left: 10px;
-  position: relative;
-  top: -2px;
 }
 .cart-page .cart-page__details .cart-page__details__table .box-delete {
   background: #543411;
@@ -1131,20 +1138,20 @@ footer .footer__box .footer__box__space p span {
 .cart-page .cart-page__details .cart-page__details__table .box-delete.active {
   left: 50%;
 }
-.cart-page .cart-page__button__group .button__group__price {
+.cart-page .cart-page__button__group > div .button__group__price {
   font-weight: bold;
   color: #000;
   font-size: 18px;
 }
-.cart-page .cart-page__button__group .button__group__price span {
+.cart-page .cart-page__button__group > div .button__group__price span {
   display: inline-block;
   font-weight: bold;
   color: #000;
   font-size: 18px;
   margin-left: 100px;
 }
-.cart-page .cart-page__button__group .button__group__continue,
-.cart-page .cart-page__button__group .button__group__checkout {
+.cart-page .cart-page__button__group > div .button__group__continue,
+.cart-page .cart-page__button__group > div .button__group__checkout {
   display: inline-block;
   margin-top: 15px;
   width: 100%;
@@ -1158,20 +1165,20 @@ footer .footer__box .footer__box__space p span {
   text-transform: uppercase;
   color: #666;
 }
-.cart-page .cart-page__button__group .button__group__continue i,
-.cart-page .cart-page__button__group .button__group__checkout i {
+.cart-page .cart-page__button__group > div .button__group__continue i,
+.cart-page .cart-page__button__group > div .button__group__checkout i {
   font-size: 12px;
   margin-right: 10px;
 }
-.cart-page .cart-page__button__group .button__group__checkout {
+.cart-page .cart-page__button__group > div .button__group__checkout {
   background: #ff5c01;
   color: #fff;
   transition: 0.3s all ease;
 }
-.cart-page .cart-page__button__group .button__group__checkout:hover {
+.cart-page .cart-page__button__group > div .button__group__checkout:hover {
   background: #222;
 }
-.cart-page .cart-page__button__group .button__group__continue:hover {
+.cart-page .cart-page__button__group > div .button__group__continue:hover {
   color: #666;
 }
 

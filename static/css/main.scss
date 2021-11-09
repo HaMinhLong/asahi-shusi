@@ -65,6 +65,7 @@ li {
   letter-spacing: 6px;
   font-size: 26px;
   font-weight: bold;
+  line-height: 32px;
 }
 .title--small {
   letter-spacing: 3px;
@@ -224,17 +225,23 @@ header {
     position: absolute;
     top: 50px;
     left: 300px;
+    z-index: -1;
   }
   .header__flower__right {
     position: absolute;
     top: 20px;
     right: 330px;
+    z-index: -1;
   }
   .header__background {
     width: 100%;
     height: 40px;
     background: url("/static/images/home/bg_footer.png");
     background-size: cover;
+    .header__background__phone {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
   .header__box {
     height: 120px;
@@ -264,6 +271,15 @@ header {
           }
         }
       }
+      .header__box__cart {
+        img {
+          width: 50px;
+          height: 45px;
+        }
+      }
+    }
+    .header__box__nav {
+      display: none;
     }
   }
   .header__menu {
@@ -285,6 +301,9 @@ header {
             color: $colorTextHover;
           }
         }
+      }
+      img {
+        display: none;
       }
     }
   }
@@ -313,8 +332,9 @@ header {
   .about-us-home__content {
     .about-us-home__content__description {
       margin-top: 10px;
+      padding: 0px 200px;
       p {
-        margin-top: 10px;
+        text-align: center;
       }
     }
   }
@@ -343,10 +363,10 @@ header {
     height: 650px;
     img {
       position: absolute;
-      top: 0;
+      top: 0px;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 99%;
     }
     .menu-home__image__img {
       z-index: -1;
@@ -435,7 +455,7 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 99%;
   }
   .banner-page__background {
     position: absolute;
@@ -452,6 +472,7 @@ footer {
       margin-bottom: 30px;
       .article__image__box {
         display: inline-block;
+        width: 100%;
         height: 330px;
         overflow: hidden;
         img {
@@ -473,6 +494,9 @@ footer {
           justify-self: 21px;
           overflow: hidden;
           font-weight: bold;
+          line-height: 22px;
+          height: 22px;
+          overflow: hidden;
         }
         .article__content__description {
           margin-top: 5px;
@@ -541,6 +565,8 @@ footer {
           line-height: 20px;
           text-transform: uppercase;
           text-align: center;
+          height: 20px;
+          overflow: hidden;
         }
         .content__description {
           margin-top: 25px;
@@ -577,6 +603,7 @@ footer {
       margin-bottom: 30px;
       .reason__image__box {
         display: inline-block;
+        width: 100%;
         height: 250px;
         img {
           width: 100%;
@@ -591,6 +618,8 @@ footer {
           width: 100%;
           font-size: 18px;
           text-transform: uppercase;
+          height: 24px;
+          overflow: hidden;
         }
         .reason__content__name {
           font-size: 12px;
@@ -641,7 +670,6 @@ footer {
             display: flex;
             margin-bottom: 20px;
             padding-right: 15px;
-
             label {
               width: 18%;
               color: $colorText;
@@ -955,6 +983,7 @@ footer {
     font-size: 28px;
     font-weight: bold;
     text-align: center;
+    line-height: 32px;
   }
   .article-details__description {
     margin-top: 45px;
@@ -1090,6 +1119,9 @@ footer {
                     font-weight: bold;
                     text-align: left;
                     font-size: 13px;
+                    img {
+                      display: none;
+                    }
                   }
                   .price {
                     display: none;
@@ -1131,30 +1163,7 @@ footer {
           }
         }
       }
-      .no-products {
-        margin-top: 36px;
-        p {
-          font-weight: 500;
-          text-align: center;
-        }
-        div {
-          margin-top: 16px;
-          display: flex;
-          align-items: center;
-          justify-content: space-around;
-          a {
-            display: flex;
-            align-items: center;
-            img {
-              width: 20px;
-              height: 20%;
-              margin-left: 10px;
-              position: relative;
-              top: -2px;
-            }
-          }
-        }
-      }
+
       .box-delete {
         background: $colorText;
         padding: 20px 16px;
@@ -1194,47 +1203,49 @@ footer {
     }
   }
   .cart-page__button__group {
-    .button__group__price {
-      font-weight: bold;
-      color: #000;
-      font-size: 18px;
-      span {
-        display: inline-block;
+    > div {
+      .button__group__price {
         font-weight: bold;
         color: #000;
         font-size: 18px;
-        margin-left: 100px;
+        span {
+          display: inline-block;
+          font-weight: bold;
+          color: #000;
+          font-size: 18px;
+          margin-left: 100px;
+        }
       }
-    }
-    .button__group__continue,
-    .button__group__checkout {
-      display: inline-block;
-      margin-top: 15px;
-      width: 100%;
-      background: #ecebec;
-      font-size: 16px;
-      padding: 13px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      cursor: pointer;
-      text-align: center;
-      text-transform: uppercase;
-      color: #666;
-      i {
-        font-size: 12px;
-        margin-right: 10px;
+      .button__group__continue,
+      .button__group__checkout {
+        display: inline-block;
+        margin-top: 15px;
+        width: 100%;
+        background: #ecebec;
+        font-size: 16px;
+        padding: 13px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        cursor: pointer;
+        text-align: center;
+        text-transform: uppercase;
+        color: #666;
+        i {
+          font-size: 12px;
+          margin-right: 10px;
+        }
       }
-    }
-    .button__group__checkout {
-      background: #ff5c01;
-      color: #fff;
-      transition: 0.3s all ease;
-    }
-    .button__group__checkout:hover {
-      background: #222;
-    }
-    .button__group__continue:hover {
-      color: #666;
+      .button__group__checkout {
+        background: #ff5c01;
+        color: #fff;
+        transition: 0.3s all ease;
+      }
+      .button__group__checkout:hover {
+        background: #222;
+      }
+      .button__group__continue:hover {
+        color: #666;
+      }
     }
   }
 }

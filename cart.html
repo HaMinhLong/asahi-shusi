@@ -33,7 +33,15 @@
         alt="flower_right"
         class="header__flower__right"
       />
-      <div class="header__background"></div>
+      <div class="header__background">
+        <div class="header__background__phone d-flex align-items-center">
+          <img src="/static/images/home/phone.png" alt="" />
+          <div class="header__background__phone__number d-flex flex-column">
+            <span>Hotline</span>
+            <p>0968 266 266</p>
+          </div>
+        </div>
+      </div>
       <div class="header__box">
         <div
           class="
@@ -61,6 +69,11 @@
             <img src="/static/images/home/cart.png" alt="" />
             <p>Giỏ hàng</p>
           </a>
+          <img
+            src="/static/images/home/menu-icon.svg"
+            alt=""
+            class="header__box__nav"
+          />
         </div>
       </div>
       <div class="header__menu">
@@ -109,6 +122,12 @@
               ><span>Tin tức</span><span>>ニュース</span></a
             >
           </li>
+          <img
+            width="20"
+            height="20"
+            src="/static/images/home/trush.svg"
+            alt=""
+          />
         </ul>
       </div>
     </header>
@@ -125,7 +144,7 @@
     <section class="cart-page container__box--small">
       <div class="container-fluid">
         <div class="row">
-          <div class="cart-page__details col-12 col-md-8">
+          <div class="cart-page__details col-12 col-md-12 col-lg-8">
             <!-- <p>Chưa có sản phẩm nào trong giỏ hàng</p> -->
             <div class="cart-page__details__table">
               <table>
@@ -150,6 +169,12 @@
                       <div>
                         <p>
                           Salad Xoài Với Trứng Cua Đỏ - マンゴーと赤蟹子のサラダ
+                          <img
+                            width="10"
+                            height="10"
+                            src="/static/images/cart/trush.svg"
+                            alt=""
+                          />
                         </p>
                         <p class="price">168.000 đ</p>
                         <div class="amount">
@@ -259,7 +284,13 @@
                     <td class="d-flex align-items-center">
                       <div>
                         <p>
-                          Salad Xoài Với Trứng Cua Đỏ - マンゴーと赤蟹子のサラダ
+                          Salad Xoài Với Trứng Cua Đỏ -
+                          マンゴーと赤蟹子のサラダ<img
+                            width="10"
+                            height="10"
+                            src="/static/images/cart/trush.svg"
+                            alt=""
+                          />
                         </p>
                         <p class="price">168.000 đ</p>
                         <div class="amount">
@@ -361,15 +392,7 @@
                   </tr>
                 </tbody>
               </table>
-              <!-- <div class="no-products">
-                    <p>Giỏ hàng hiện chưa có sản phẩm nào.</p>
-                    <div>
-                      <a href="./products.html">Đến trang sản phẩm</a
-                      ><a href="/index.html"
-                        >Trở về trang chủ <img src="/static/images/cart/home.svg" alt=""
-                      /></a>
-                    </div>
-                  </div> -->
+
               <div class="box-delete">
                 <p>Bạn có muốn xóa sản phẩm này khỏi giỏ hàng</p>
                 <div>
@@ -379,17 +402,19 @@
               </div>
             </div>
           </div>
-          <div class="cart-page__button__group col-12 col-md-4">
-            <p class="button__group__price">
-              Tổng tiền: <span>388.000 đ</span>
-            </p>
-            <a href="/" class="button__group__checkout">
-              <i class="fas fa-check"></i>
-              Tiến hành đặt ngay
-            </a>
-            <a href="/menu.html" class="button__group__continue">
-              <i class="fas fa-arrow-left"></i>Tiếp tục mua hàng
-            </a>
+          <div class="cart-page__button__group col-12 col-md-12 col-lg-4">
+            <div>
+              <p class="button__group__price">
+                Tổng tiền: <span>388.000 đ</span>
+              </p>
+              <a href="/" class="button__group__checkout">
+                <i class="fas fa-check"></i>
+                Tiến hành đặt ngay
+              </a>
+              <a href="/menu.html" class="button__group__continue">
+                <i class="fas fa-arrow-left"></i>Tiếp tục mua hàng
+              </a>
+            </div>
           </div>
         </div>
       </div>
